@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korporate | Briefing de Automação</title>
+    <link rel="icon" type="image/png" href="korp_favi.png">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none;   /* Safari */
+            -khtml-user-select: none;    /* Konqueror HTML */
+            -moz-user-select: none;      /* Old versions of Firefox */
+            -ms-user-select: none;       /* Internet Explorer/Edge */
+            user-select: none;           /* Non-prefixed version, currently
+                                           supported by Chrome, Edge, Opera and Firefox */
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="https://n8n.korporate.tech/form/1c630187-5576-4a4f-be10-0ac0afd4c1c8"></iframe>
+    <script>
+        // Desabilita o clique com o botão direito
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Desabilita a seleção de texto
+        document.addEventListener('selectstart', event => event.preventDefault());
+
+        // Desabilita algumas teclas de atalho para inspeção
+        document.onkeydown = function(e) {
+            // Desabilita F12
+            if (e.keyCode == 123) {
+                return false;
+            }
+            // Desabilita Ctrl+Shift+I
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                return false;
+            }
+            // Desabilita Ctrl+Shift+J
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                return false;
+            }
+            // Desabilita Ctrl+U (view source)
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                return false;
+            }
+        };
+    </script>
+</body>
+</html>
